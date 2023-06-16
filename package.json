@@ -1,0 +1,13 @@
+{
+	"name": "threadx",
+	"version": "1.0.0",
+	"description": "A simple library for running JavaScript code in a background thread.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist"
+	],
+	"devDependencies": {
+		"@types/node": "^20.3.1"
+	}
+}
