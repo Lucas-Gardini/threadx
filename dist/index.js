@@ -12,8 +12,6 @@ async function test() {
         setTimeout(() => {
             console.log(`${chalk_1.default.bgWhite(chalk_1.default.green(" THREAD "))} Thread is done!`);
         }, 1000);
-    }, {
-        dependencies: [require("chalk")],
     });
     thread.on("error", (err) => {
         console.log("Thread errored with error:", err);

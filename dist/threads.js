@@ -13,8 +13,7 @@ async function execute() {
 execute();
 `;
 class Thread {
-    constructor(cb, options) {
-        console.log(options);
+    constructor(cb) {
         const worker = new node_worker_threads_1.Worker(defaultStructure.replace("THREADED_FUNCTION", cb.toString()), { eval: true });
         this.worker = worker;
     }
