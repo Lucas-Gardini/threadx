@@ -1,4 +1,6 @@
-# ThreadX
+# ❗ THIS PROJECT IS UNDER DEVELOPMENT AND NOT READY FOR PRODUCTION USE (IS NOT EVEN WORKING) ❗
+
+## ThreadX
 
 [![npm version](https://badge.fury.io/js/threadx.svg)](https://www.npmjs.com/package/threadx)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -7,11 +9,11 @@ ThreadX is a powerful and efficient Node.js library for managing and running thr
 
 ## Features
 
--   Simple and intuitive API for managing threads
--   Efficiently parallelize CPU-intensive tasks
--   Improved performance through concurrent execution
--   Seamless integration with existing Node.js projects
--   Lightweight and minimal overhead
+- Simple and intuitive API for managing threads
+- Efficiently parallelize CPU-intensive tasks
+- Improved performance through concurrent execution
+- Seamless integration with existing Node.js projects
+- Lightweight and minimal overhead
 
 ## Installation
 
@@ -41,7 +43,7 @@ ThreadX is [MIT licensed](https://opensource.org/licenses/MIT), which means you 
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, you can reach me at contato@gardini.dev.
+If you have any questions, suggestions, or feedback, you can reach me at <contato@gardini.dev>.
 
 Visit our website: [https://www.threadx.com](https://www.threadx.com)
 

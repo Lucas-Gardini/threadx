@@ -1,3 +1,5 @@
 export declare class Thread {
-    constructor(cb: (...params: any) => void);
+    private worker;
+    constructor(cb: (...params: any) => void, options?: IThreadOptions);
+    on(event: "error" | "exit" | "message", cb: (...params: any) => void): void;
 }
