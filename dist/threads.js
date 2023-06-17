@@ -4,7 +4,10 @@ exports.Thread = void 0;
 const node_worker_threads_1 = require("node:worker_threads");
 class Thread {
     constructor(cb) {
-        const worker = new node_worker_threads_1.Worker("./executor.ts", { eval: true, workerData: { cb } });
+        cb();
+        console.log("Creating thread");
+        console.log(`${cb.toString()}()`);
+        const worker = new node_worker_threads_1.Worker(`${cb.toString()}()`, { eval: true });
         return worker;
     }
 }

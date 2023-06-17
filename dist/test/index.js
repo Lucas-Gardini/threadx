@@ -9,18 +9,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const node_worker_threads_1 = require("node:worker_threads");
-const execute = () => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        console.log(node_worker_threads_1.workerData);
-        console.log("Thread started");
-        const cb = new Function(`return ${node_worker_threads_1.workerData}`)();
-        yield cb();
-        console.log("Thread finished");
-        node_worker_threads_1.parentPort === null || node_worker_threads_1.parentPort === void 0 ? void 0 : node_worker_threads_1.parentPort.postMessage("done");
-    }
-    catch (error) {
-        console.log("Thread errored", error);
-    }
-});
-execute();
+const threads_1 = require("../threads");
+function test() {
+    return __awaiter(this, void 0, void 0, function* () {
+        console.log("Running test!");
+        const thread = new threads_1.Thread(() => __awaiter(this, void 0, void 0, function* () {
+            console.log("Running threaded function");
+            setTimeout(() => {
+                throw new Error("test");
+            });
+        }));
+        setTimeout(() => {
+            console.log("Thread exiting");
+            process.exit(0);
+        }, 10000);
+    });
+}
+test();
